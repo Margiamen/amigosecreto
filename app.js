@@ -2,9 +2,9 @@
 let amigos = [];
 
 function agregarAmigo() {
-    // Obtener el elemento del campo de entrada por su ID (ajusta el ID según tu HTML)
+    // Obtener el elemento del campo de entrada por su ID 
     const inputNombre = document.getElementById('amigo');
-    const nuevoNombre = inputNombre.value.trim(); // Eliminamos espacios en blanco al inicio y final
+    const nuevoNombre = inputNombre.value.trim(); // Eliminamos espacios en blanco 
 
     // Validación: verificar si el campo está vacío
     if (nuevoNombre === '') {
@@ -15,18 +15,18 @@ function agregarAmigo() {
     // Agregar el nombre al array de amigos
     amigos.push(nuevoNombre);
 
-    // Mostrar los nombres actualizados (opcional, puedes personalizarlo)
+    // Mostrar los nombres actualizados 
     console.log(amigos);
 
-    // Limpiar el campo de entrada
+    // Limpiar el campo 
     inputNombre.value = '';
 }
-// ... (código anterior)
+//
 
-// Mostrar los nombres en una lista
+// Mostrar  lista
 function mostrarAmigos() {
     const listaAmigos = document.getElementById('listaAmigos');
-    listaAmigos.innerHTML = ''; // Limpiar la lista antes de volver a poblarla
+    listaAmigos.innerHTML = ''; // Limpiar la lista 
   
     amigos.forEach(amigo => {
       const li = document.createElement('li');
@@ -48,6 +48,6 @@ function mostrarAmigos() {
     const amigoSorteado = amigos[indiceAleatorio];
   
     // 4. Mostrar el resultado
-    const elementoResultado = document.getElementById("resultado"); // Ajusta el ID según tu HTML
+    const elementoResultado = document.getElementById("resultado"); 
     elementoResultado.innerHTML = `¡El amigo sorteado es: ${amigoSorteado}!`;
   }
